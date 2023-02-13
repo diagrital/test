@@ -7,7 +7,7 @@ folder_path = st.text_input("Enter the folder path:")
 if folder_path:
     file_names = []
     dfs = []
-    for file in os.listdir(folder_path):
+    for file in os.listdir(f"r{folder_path}"):
         if file.endswith(".xlsx") or file.endswith(".xls"):
             file_names.append(file)
             df = pd.read_excel(os.path.join(f"r{folder_path, file}"))
