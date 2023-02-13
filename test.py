@@ -10,7 +10,7 @@ if folder_path:
     for file in os.listdir(folder_path):
         if file.endswith(".xlsx") or file.endswith(".xls"):
             file_names.append(file)
-            df = pd.read_excel(os.path.join(folder_path, file))
+            df = pd.read_excel(os.path.join(f"r{folder_path, file}"))
             pulse_value = st.sidebar.selectbox("Select pulse", [0,1,2,3,4,5], index=0)
             pulse_value_2 = st.sidebar.selectbox("Select pulse 2",[0,1,2,3,4,5],index = 0)
             df = df[(df['Pulse'] == pulse_value) | (df['Pulse'] == pulse_value_2)]
